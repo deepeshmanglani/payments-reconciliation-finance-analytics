@@ -115,7 +115,7 @@ The synthetic dataset contains:
 ## Project Structure
 
 ```text
-Ziina_Project/
+PaymentsRecon_Project/
 │
 ├── generate_data.py
 ├── test_connection.py
