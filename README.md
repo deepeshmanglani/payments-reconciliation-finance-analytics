@@ -4,8 +4,8 @@ A synthetic payments reconciliation and finance analytics project designed to si
 
 ## Finance Dashboard
 
-![Metabase Finance & Reconciliation Dashboard](YOUR_DASHBOARD_SCREENSHOT.png)
-
+<img width="1335" height="276" alt="image" src="https://github.com/user-attachments/assets/d4f35cea-2e46-43e6-8cd4-9d1cb25cb6c1" />
+ 
 A Metabase dashboard was created to monitor:
 
 - Total Payment Volume (TPV)
