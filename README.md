@@ -2,19 +2,33 @@
 
 A synthetic payments reconciliation and finance analytics project designed to simulate a fintech payment flow across the product ledger, payment gateway, bank settlement, and general ledger.
 
+## Finance Dashboard
+
+![Metabase Finance & Reconciliation Dashboard](YOUR_DASHBOARD_SCREENSHOT.png)
+
+A Metabase dashboard was created to monitor:
+
+- Total Payment Volume (TPV)
+- Settled Amount
+- Reconciliation Exceptions
+- Exception Rate
+
+Current synthetic dataset metrics:
+
+- **TPV:** AED 10.55M
+- **Settled Amount:** AED 10.23M
+- **Reconciliation Exceptions:** 700
+- **Exception Rate:** 7.00%
+
+The dashboard is intended to demonstrate how transaction-level reconciliation outputs can be converted into finance monitoring metrics.
+
 ## Project Objective
 
 The objective is to build a finance-controlled reconciliation workflow that identifies transaction-level breaks, classifies exceptions, and provides management-level finance metrics.
 
-The project simulates a payment lifecycle:
+The project simulates the following payment lifecycle:
 
-Customer Payment
-→ Product Ledger
-→ Payment Gateway
-→ Bank Settlement
-→ General Ledger
-→ Reconciliation Engine
-→ Finance Dashboard
+**Customer Payment → Product Ledger → Payment Gateway → Bank Settlement → General Ledger → Reconciliation Engine → Finance Dashboard**
 
 ## Key Finance Questions
 
@@ -37,36 +51,12 @@ The project uses synthetic transaction data representing 10,000 payment transact
 
 Four source systems are simulated:
 
-1. **Product Ledger**
-   - Transaction ID
-   - Customer ID
-   - Transaction amount
-   - Currency
-   - Transaction timestamp
-   - Status
-
-2. **Payment Gateway**
-   - Gateway transaction ID
-   - Transaction ID
-   - Gateway
-   - Payment amount
-   - Gateway fee
-   - Status
-
-3. **Bank Settlement**
-   - Settlement ID
-   - Transaction ID
-   - Settlement date
-   - Settlement amount
-   - Settlement status
-
-4. **General Ledger**
-   - Journal ID
-   - Transaction ID
-   - Account
-   - Debit
-   - Credit
-   - Posting date
+| Source System | Fields |
+|---|---|
+| **Product Ledger** | Transaction ID, Customer ID, Transaction amount, Currency, Transaction timestamp, Status |
+| **Payment Gateway** | Gateway transaction ID, Transaction ID, Gateway, Payment amount, Gateway fee, Status |
+| **Bank Settlement** | Settlement ID, Transaction ID, Settlement date, Settlement amount, Settlement status |
+| **General Ledger** | Journal ID, Transaction ID, Account, Debit, Credit, Posting date |
 
 ## Reconciliation Logic
 
@@ -101,23 +91,17 @@ The synthetic dataset contains:
 | GL Mismatch | 100 |
 | **Total** | **10,000** |
 
-## Finance Dashboard
+## Key Finance Metrics
 
-A Metabase dashboard was created to monitor:
-
-- Total Payment Volume (TPV)
-- Settled Amount
-- Reconciliation Exceptions
-- Exception Rate
-
-Current synthetic dataset metrics:
-
-- **TPV:** AED 10.55M
-- **Settled Amount:** AED 10.23M
-- **Reconciliation Exceptions:** 700
-- **Exception Rate:** 7.00%
-
-The dashboard is intended to demonstrate how transaction-level reconciliation outputs can be converted into finance monitoring metrics.
+| Metric | Value |
+|---|---:|
+| TPV | AED 10,549,173.00 |
+| Settled Amount | AED 10,232,298.35 |
+| Pending Settlement Exposure | AED 103,383.00 |
+| Missing Settlement Exposure | AED 109,125.00 |
+| Gateway Fees | AED 104,957.15 |
+| Exception Rate | 7.00% |
+| Reconciliation Variance | AED 1,500.00 |
 
 ## Technology Stack
 
@@ -145,3 +129,4 @@ Ziina_Project/
 ├── finance_metrics.sql
 ├── README.md
 └── .gitignore
+```
